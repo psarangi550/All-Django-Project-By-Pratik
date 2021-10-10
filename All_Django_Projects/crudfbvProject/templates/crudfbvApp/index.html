@@ -1,0 +1,40 @@
+{% extends "crudfbvApp/base.html" %}
+
+{% block content %}
+
+<div class="container mt-5" align="center">
+    <div class="row">
+        <div class="col-md-12 mt-auto">
+            {% if employees %}
+            <table class="table table-hover table-striped table-bordered table-light bg-light">
+                <thead class="text-center">
+                    <th>EMPLOYEE NUMBER</th>
+                    <th>EMPLOYEE NAME</th>
+                    <th>EMPLOYEE SALARY</th>
+                    <th>EMPLOYEE ADDRESS</th>
+                    <th>ACTIONS</th>
+                </thead>
+                <tbody>
+                {% for emp in employees %}
+                <tr>
+                    <td>{{emp.eno}}</td>
+                    <td>{{emp.ename}}</td>
+                    <td>{{emp.esal}}</td>
+                    <td>{{emp.eaddr}}</td>
+                    <td>
+                    <a href="/update/{{emp.id}}" class="btn btn-sm btn-warning">UPDATE</a>
+                    <a href="/delete/{{emp.id}}/" class="btn btn-sm btn-danger">DELETE</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <h1 class="display-4 alert alert-danger">NO DATA Avaiable</h1>
+            {% endif %}
+            <a href="/create/" class="btn text-uppercase btn-success form-control">Insert A Record</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

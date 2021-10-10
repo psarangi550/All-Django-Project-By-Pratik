@@ -1,0 +1,42 @@
+{% extends "cbvbeerApp/base.html" %}
+
+{% block content %}
+
+<div class="container mt-5" align="center">
+    <a class="btn btn-success float-left mb-5" href="/create/">Add Your Beer</a>
+    {% if beer_list %}
+    <table class="table table-bordered table-striped table-hover table-light my-3">
+        <thead class="text-uppercase text-center">
+            <th>Beer Name</th>
+            <th>Beer Price</th>
+            <th>Beer Taste</th>
+            <th>Alchol %</th>
+            <th>manufacture</th>
+            <th>Is Alcholic</th>
+            <th>Actions</th>
+        </thead>
+        <tbody class="text-center">
+            {% for beer in beer_list %}
+            <tr>
+                <td>{{beer.name}}</td>
+                <td>{{beer.price}}</td>
+                <td>{{beer.taste}}</td>
+                <td>{{beer.percentage_of_alchol}}</td>
+                <td>{{beer.manufacture}}</td>
+                <td>{{beer.is_alcholic}}</td>
+                <td>
+                    <a href="/detail/{{beer.id}}/" class="btn btn-sm btn-success">Detail</a>&nbsp;
+                    <a href="/update/{{beer.id}}/" class="btn btn-sm btn-warning">Edit</a>&nbsp;
+                    <a href="/delete/{{beer.id}}/" class="btn btn-sm btn-danger">Delete</a>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <h1 class="display-4 alert alert-danger">Table Not Available</h1>
+    {% endif %}
+</div>
+
+{% endblock content %}

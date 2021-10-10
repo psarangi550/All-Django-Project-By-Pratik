@@ -1,0 +1,18 @@
+{% extends "cbvbeerApp/base.html" %}
+{% block content %}
+    <div class="container mt-5" align="center">
+        <div class="row">
+            <div class="col-md-6 m-auto">
+                <ul class="list-group">
+                    <li class="list-group-item disabled list-group-item-heading font-weight-bold text-center" aria-disabled="true">BEER NAME:-{{beer.name| upper }}</li>
+                    <li class="list-group-item list-group-item-action list-group-item-success font-weight-bold">Beer Price:-{{beer.price}} Rs</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary font-weight-bold">Beer Taste:-{{beer.taste}}</li>
+                    <li class="list-group-item list-group-item-action list-group-item-info font-weight-bold">Alchol Percentage:-{{beer.percentage_of_alchol}}%</li>
+                    <li class="list-group-item list-group-item-action list-group-item-warning font-weight-bold">Manufacture:-{{beer.manufacture}}</li>
+                    <li class="list-group-item list-group-item-action list-group-item-dark  font-weight-bold"><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."> Is Alchoholic:-{{beer.is_alcholic}}</li>
+                    <li class="list-group-item list-group-item-action list-group-item-light"><a href="/home/" class="btn btn-primary">Back to Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

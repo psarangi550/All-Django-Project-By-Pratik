@@ -1,0 +1,17 @@
+{% extends "cbvModelViewCustomApp/base.html" %}
+
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="list-group">
+        <div class="list-group-item list-group-item-action list-group-item-dark text-white"><a href="/home/">{{book.title}}</a></div>
+        <div class="list-group-item list-group-item-action list-group-item-primary">{{book.author}}</div>
+        <div class="list-group-item list-group-item-action list-group-item-secondary">{{book.pages}}</div>
+        <div class="list-group-item list-group-item-action list-group-item-light">{{book.price}}</div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

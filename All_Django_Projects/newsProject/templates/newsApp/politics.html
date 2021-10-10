@@ -1,0 +1,47 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%  static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{%  static 'bootstrap/css/mdb.css' %}">
+</head>
+<body>
+<!--navbar-->
+<nav class=" navbar navbar-inverse bg-primary navbar-fixed-top">
+    <div class="navbar-header">
+        <a href="" class="navbar-brand text-white">Home</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="accordion" id="my_accordion">
+        <div class="card mt-4 bg-light">
+            <div class="card-header" data-toggle="collapse" data-target="#my_collapse">
+                <div class="card-tittle text-center">
+                    <h1>Here are some Politics  News</h1>
+                </div>
+            </div>
+            <div class="collapse" id="my_collapse">
+                <div class="card-body bg-white" data-parent="my_accordion">
+                    <ul>
+                     <p class="lead">{{date}}</p>
+                        <li><p class="lead">{{politics_news1}}</p></li>
+                        <li><p class="lead">{{politics_news2}}</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static 'bootstrap/js/mdb.js' %}"></script>
+</body>
+</html>

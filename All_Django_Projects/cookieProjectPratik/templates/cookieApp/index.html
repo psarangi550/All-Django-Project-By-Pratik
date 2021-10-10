@@ -1,0 +1,15 @@
+{% extends "cookieApp/base.html" %}
+{% block title %}
+    Home
+{% endblock title%}
+{% block content %}
+    <div class="form-group">
+
+        <form action="/name/" method="POST">
+            {% csrf_token%}
+            <label for="id_home">Enter your ID</label>
+            <input type="text" name="id" id="id_home" class="form-control" placeholder="Enter your id">
+            <input type="submit" href="/home" value="Submit" class= "btn btn-success form-control">
+        </form>
+    </div>
+{% endblock content%}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WFMT_JOBS_PAGE</title>
+    <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/mdb.css'%}">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-bottom mt-2 navbar-right ">
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand text-white ">Home</a>
+        <a href="/jobinfo/" class="navbar-brand text-white ">Task</a>
+    </div>
+</nav>
+    <h1 class="text-center display-4 mt-3 text-white">Welcome to WFMT JOBS </h1>
+    <div class="container-fluid">
+    {% if wfmt_work_list %}
+    <table class="table table-striped table-bordered table-hover table-responsive mt-5 text-transparent hover:shadow">
+        <thead class="text-uppercase blue-gradient-rgba text-center text-white ">
+            <th>JOB ID</th>
+            <th>CP NUMBER</th>
+            <th>SNE ID</th>
+            <th>SCHEME NUMBER</th>
+            <th>A1141 CODE</th>
+            <th>CP Details</th>
+        </thead>
+        <tbody>
+    {% for emp in wfmt_work_list %}
+            <tr>
+                <td>{{emp.id}}</td>
+                <td>{{emp.cp_number}}</td>
+                <td>{{emp.sne_id}}</td>
+                <td>{{emp.scheme_number}}</td>
+                <td>{{emp.trs_area}}</td>
+                <td>{{emp.cp_details}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endif %}
+    <footer class="footer text-right">
+        <p class="lead text-white text-justify">Created By Pratik K Sarangi</p>
+    </footer>
+<!--Scripts for BootStrap-->
+<script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static 'bootstrap/js/mdb.js' %}"></script>
+</body>
+</html>

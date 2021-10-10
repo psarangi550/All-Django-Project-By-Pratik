@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--{% load static %}-->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/mdb.css'%}">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-bottom mt-2 navbar-right mt-2 ">
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand text-white ">Home</a>
+        <a href="/jobinfo/" class="navbar-brand text-white ">Task</a>
+        <a href="" class="navbar-brand text-white navbar-right ">Directory</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron  bg-transparent text-white" align="center">
+        <h1 class="display-5">Welcome to WFMT Webpage</h1>
+        <a href="/jobinfo" class="btn btn-success btn-lg text-white"> WFMT JOB INFO</a>
+    </div>
+</div>
+
+<!--Scripts for BootStrap-->
+<script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static 'bootstrap/js/mdb.js' %}"></script>
+</body>
+</html>

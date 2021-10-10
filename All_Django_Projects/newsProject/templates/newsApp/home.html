@@ -1,0 +1,55 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%  static 'bootstrap/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{%  static 'bootstrap/css/mdb.css' %}">
+</head>
+<body>
+<!--navbar-->
+<nav class=" navbar navbar-inverse bg-primary navbar-fixed-top">
+    <div class="navbar-header">
+        <a href="" class="navbar-brand text-white">Home</a>
+    </div>
+</nav>
+
+<!--Accordion for News-->
+<!--<div class="container">-->
+<!--<button class="btn btn-primary" data-toggle="collapse" data-target="#my_crawler">Click Here</button>-->
+<!--    <div class="collapse" id="my_crawler">-->
+<!--        <div class="card">-->
+<!--            <div class="card=header">-->
+<!--                <div class="card-title">-->
+<!--                    <h1> Card Header</h1>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card-body">-->
+<!--                <h3>Card Body</h3>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--my-Accordion-->
+<div class="container">
+    <div class="jumbotron mt-4 bg-secondary text-center text-white">
+        <h3>Diverse News Channel</h3>
+        <a href="movie/" class="btn btn-success text-dark">Movie News</a>
+        <a href="sport/" class="btn btn-warning text-dark">Sports News</a>
+        <a href="politics/" class="btn btn-info text-dark">Politics News</a>
+    </div>
+</div>
+
+
+<script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+<script src="{% static 'bootstrap/js/popper.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static 'bootstrap/js/mdb.js' %}"></script>
+</body>
+</html>

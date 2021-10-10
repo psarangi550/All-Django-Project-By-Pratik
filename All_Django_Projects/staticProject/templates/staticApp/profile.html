@@ -1,0 +1,65 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/mdb.css' %}">
+    <style>
+        body{
+            background:orangered;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mt-4">
+                <div class="card-header bg-light">
+                    <h1 class="text-dark text-center">Please find Few Unsplash Photo </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <img src="{% static 'image/image1.jpg' %}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+         <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <img src="{% static 'image/image2.jpg' %}" alt="" class="img-fluid img-thumbnail rounded">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <img src="{% static 'image/image3.jpg' %}" alt="" class="img-fluid img-thumbnail rounded">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--Script-->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+</body>
+</html>

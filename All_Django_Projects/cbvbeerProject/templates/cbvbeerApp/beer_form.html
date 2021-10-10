@@ -1,0 +1,31 @@
+{% extends "cbvbeerApp/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container mt-5" align="center">
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <div class="card">
+                <div class="card-header bg-secondary">
+                    <div class="card-title">
+                        <h1 class="display-4 ">Insert A New Record</h1>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        {%csrf_token%}
+                        {{form | crispy}}
+                        <input type="submit" class="btn btn-primary" value="Add/Update A Record">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock content %}

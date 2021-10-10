@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <style>
+            body{
+                background: url(https://images.unsplash.com/photo-1549490316-686f9b5d359f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .jumbotron{
+                /* background: yellow; */
+                border-radius:50px;
+          }
+          .container{
+            margin-top: 50px;
+            border-radius: 50px;
+          }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
+    <a class="navbar-brand text-white" href="#">Code With Pratik</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="container-fluid">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="/home/">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-white" href="{% url 'login' %}">Python Exam</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/django/">Django Exam</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/flask/">Flask Exam</a></li>
+      </ul>
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-right">
+        <li class="nav-item"><a class="nav-link text-white" href="/singup/">SignUp</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/accounts/login/">{% block login %}LogIn{% endblock login %}</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="/accounts/logout/">LogOut</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+        {% block content %}
+        {% endblock content %}
+
+    </body>
+</html>

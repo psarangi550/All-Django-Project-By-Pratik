@@ -1,0 +1,23 @@
+{% extends 'cbvcrudApp/base.html' %}
+{% block content %}
+    <div class="container mt-5" align="center">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <h1 class="display-4">Are You Sure You want to Delete {{book.title}}</h1>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form action=" " method="post">
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-danger btn-lg mt-auto" value="Delete Book">
+                            <a href="/detail/{{book.id}}/" class="btn btn-lg btn-primary center" align="center">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

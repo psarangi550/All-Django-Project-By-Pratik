@@ -1,0 +1,11 @@
+ Volume in drive C is SYSTEM
+ Volume Serial Number is E074-2545
+
+ Directory of C:\Users\611903295\AppData\Local\Programs\Python\Python38-32\Django_Durga\All_Django_Projects\wfmtProject\static\js
+
+29/08/2021  23:50    <DIR>          .
+29/08/2021  23:50    <DIR>          ..
+29/08/2021  06:55                24 app.js
+29/08/2021  23:50                 0 mytext.txt
+               2 File(s)             24 bytes
+               2 Dir(s)  248,331,902,976 bytes free

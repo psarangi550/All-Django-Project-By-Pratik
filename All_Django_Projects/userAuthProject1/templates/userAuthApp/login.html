@@ -1,0 +1,24 @@
+{% extends "userAuthApp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container" >
+    <div class="row">
+        <div class="col-md-4 m-auto"align="center" >
+            <div class="card">
+                <div class="card-header bg-info">
+                    <div class="card-title">
+                        <h1 class="display-4">Please LogIn to Access The Page</h1>
+                    </div>
+                </div>
+                <div class="card-body bg-secondary">
+                    <form action="" method="POST">
+                        {{form|crispy}}
+                        {% csrf_token %}
+                        <input type="submit" class="btn btn-success" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

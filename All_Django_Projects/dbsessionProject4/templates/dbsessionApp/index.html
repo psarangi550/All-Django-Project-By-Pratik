@@ -1,0 +1,10 @@
+{% extends "dbsessionApp/base.html" %}
+
+{% block content %}
+ <form action="" method="POST">
+    {{form.as_p}}
+    <input type="submit" class="btn btn-warning" value="Add">
+    {% csrf_token %}
+    </form>
+    <a href="/get/" class="btn btn-success mt-3">Show Item</a>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends "cbvcrudApp/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<div class="container mt-5" align="center">
+    <div class="row">
+        <div class="col-md-10 mt-auto">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h1 class="display-4">Insert A New Book With Details</h1>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{form|crispy}}
+                        <input type="submit" class="btn btn-info btn-lg" value="Add/Update Book">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}

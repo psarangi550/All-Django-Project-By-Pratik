@@ -1,0 +1,77 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--css Files-->
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/mdb.css' %}">
+</head>
+<body>
+<!--navbar-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+        <a href="" class="navbar-brand text-white">
+            HOME
+        </a>
+    </div>
+</nav>
+
+<!---->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-3">
+                <div class="card-header bg-success ">
+                   <div class="card-title">
+                       <h1 class="text-center">Arizona Time</h1>
+                   </div>
+
+                </div>
+                <div class="card-body">
+                   <h3>{{arizona}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mt-3">
+                <div class="card-header bg-warning">
+                   <div class="card-title">
+                       <h1 class="text-center">India Time</h1>
+                   </div>
+
+                </div>
+                <div class="card-body">
+                   <h3>{{india}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+     <div class="row">
+    <div class=" col-md-12 text-center mt-4">
+    <button class="btn btn-secondary btn-lg mt-4 text-center" href="/profile"> Click Here for profile</button>
+<!--        <a href="profile/">Click Here</a>-->
+    </div>
+    </div>
+</div>
+
+<!--Script-->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+<script>
+    btn=document.querySelector("button")
+    btn.addEventListener("click",()=>{
+        location. href = "http://127.0.0.1:7777/profile/";
+    })
+</script>
+</body>
+</html>

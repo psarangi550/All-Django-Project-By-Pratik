@@ -1,0 +1,73 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+# Create your views here.
+def welcome(request):
+    s1="""<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="All_Django_Projects/Bootstrap/css/bootstrap..css">
+    <link rel="stylesheet" href="/All_Django_Projects/Bootstrap/css/mdb.css">
+</head>
+<body>
+<div class="container-fluid md-2">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-center m-auto">
+        <div class="card-header text-center">
+            <h1 class="text-center">This is For Django Hyderabad Jobs</h1>
+        </div>
+        <div class="card-body text-center">
+            <h2 class="text-center">This is the Description for card details </h2>
+        </div>
+    </div>
+        </div>
+    </div>
+
+</div>
+<script src="All_Django_Projects/Bootstrap/js/jquery.js"></script>
+<script src="All_Django_Projects/Bootstrap/js/popper.js"></script>
+<script src="All_Django_Projects/Bootstrap/js/bootstrap.js"></script>
+<script src="All_Django_Projects/Bootstrap/js/mdb.js"></script>
+</body>
+</html>"""
+    return HttpResponse(s1)
+def hello(request):
+    s2="""<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="All_Django_Projects/Bootstrap/css/bootstrap..css">
+    <link rel="stylesheet" href="/All_Django_Projects/Bootstrap/css/mdb.css">
+</head>
+<body>
+<div class="container-fluid md-2">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-center m-auto">
+        <div class="card-header text-center">
+            <h1 class="text-center">This is For Django Bangalore Jobs</h1>
+        </div>
+        <div class="card-body text-center">
+            <h2 class="text-center">This is the Description for Bangalore job details </h2>
+        </div>
+    </div>
+        </div>
+    </div>
+
+</div>
+<script src="All_Django_Projects/Bootstrap/js/jquery.js"></script>
+<script src="All_Django_Projects/Bootstrap/js/popper.js"></script>
+<script src="All_Django_Projects/Bootstrap/js/bootstrap.js"></script>
+<script src="All_Django_Projects/Bootstrap/js/mdb.js"></script>
+</body>
+</html>"""
+    return HttpResponse(s2)

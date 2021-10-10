@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static%}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load custom_filter %}
+    {% if data_list %}
+    {% for data in data_list %}
+    <ul>
+        <li>{{data.org_name|name:"5"}}</li>
+        <li>{{data.course_name}}</li>
+        <li>{{data.category}}</li>
+        <li>{{data.date|date:"SHORT_DATE_FORMAT"}}</li>
+    </ul>
+    <hr>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

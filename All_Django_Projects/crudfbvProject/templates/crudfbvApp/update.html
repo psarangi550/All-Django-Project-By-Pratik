@@ -1,0 +1,41 @@
+{% extends "crudfbvApp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content%}
+
+<div class="container mt-5" align="center"ign>
+    <div class="row">
+        <div class="col-md-8 m-auto">
+            <div class="card text-dark">
+                <div class="card-header text-dark">
+                    <div class="card-title">
+                        <h1 class="display-4 text-center">Update Existing Record</h1>
+                    </div>
+                </div>
+                <div class="card-body bg-secondary text-dark">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                        <label for="Emp1" class="float-left text-white">Employee Number</label>
+                        <input type="text" name="eno" id="Emp1" class="form-control"  value="{{employee.eno}}">
+                        </div>
+                        <div class="form-group">
+                        <label for="Emp2" class="float-left text-white">Employee Name</label>
+                        <input type="text" name="ename" id="Emp2" class="form-control"  value="{{employee.ename}}">
+                        </div>
+                        <div class="form-group">
+                        <label for="Emp3" class="float-left text-white">Employee Salary</label>
+                        <input type="text" name="esal" id="Emp3" class="form-control"  value="{{employee.esal}}">
+                        </div>
+                        <div class="form-group">
+                        <label for="Emp4" class="float-left text-white">Employee Address</label>
+                        <input type="text" name="eaddr" id="Emp4" class="form-control" value="{{employee.eaddr}}">
+                        </div>
+                        <input type="submit"  class="btn btn-success btn-lg form-control" value="Update">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
