@@ -35,7 +35,7 @@ class Post(models.Model):
 class Song(models.Model):
     user=models.ManyToManyField(User)
     song_name=models.CharField(max_length=50)
-    song_duration=models.IntegerField()
+    =models.IntegerField()
 
     #in order to define the manay to many relation ship  we have to display the user info in the song table hence we have to define the fuinction for the same
 
