@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <h3 class="display-5"> Name:-{{name}}</h3>
                         <h3 class="display-5">Salary:-{{salary}}</h3>
-                        <h3 class="display-5">Course:-{{course}}</h3>
+                        <h3 class="display-5">Course:-{{context.course}}</h3>
                         <h3 class="display-5">ID:-{{id}}</h3>
                         <a href="{% url 'dynamic' 12 %}" class="btn btn-success">Click 12</a>
                         <a href="{% url 'dynamic' 13 %}" class="btn btn-warning">Click 13</a>
