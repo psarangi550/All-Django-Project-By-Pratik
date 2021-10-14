@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.TaskAddShowView.as_view(),name="addshow"),
     path('delete/<int:id>/', views.DelRedirectView.as_view(),name="delete"),
-    path('update/<int:id>/', views.UpdateTaskView.as_view(),name="update")
+    # path('update/<int:id>/', views.UpdateTaskView.as_view(),name="update")
+    path('update/<int:id>/', views.UpdateTempView.as_view(),name="update")
 ]
