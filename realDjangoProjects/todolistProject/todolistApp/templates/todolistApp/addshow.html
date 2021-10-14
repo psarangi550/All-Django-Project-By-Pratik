@@ -1,0 +1,50 @@
+{% extends "todolistApp/base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+    <div class="container-fluid mt-5" align="center">
+        <h1 class="display-5 alert alert-success">TODOLIST APP USING BASE CLASS BASE VIEW</h1>
+        <div class="row">
+            <div class="col-md-4 mt-auto">
+                <h3 class="display-5 alert alert-warning">Add A Task</h3>
+                <form action="" method="post">
+                    {{form|crispy}}
+                    {%csrf_token%}
+                    <input type="submit" value="Add A Task" class="btn btn-success form-control">
+                </form>
+            </div>
+            <div class="col-md-8">
+                {% if todos %}
+                    <table class="table table-hovered table-bordered table-stripped table-active text-white">
+                        <thead class="text-uppercase text-center text-white">
+                            <th>ID</th>
+                            <th>TASK DATE</th>
+                            <th>TASK NAME</th>
+                            <th>TASK DESCRIPTION</th>
+                            <th>ACTION</th>
+                        </thead>
+                        <tbody class="text-center">
+                            <h3 class="display-5 alert alert-info">Show All Task</h3>
+                            {% for todo in todos %}
+                                <tr>
+                                    <td width="10%">{{todo.id}}</td>
+                                    <td width="15%">{{todo.date}}</td>
+                                    <td wisth="">{{todo.task}}</td>
+                                    <td width="30%">{{todo.task_description}}</td>
+                                    <td width="">
+                                        <a href="{% url 'update' todo.id %}" class="btn btn-warning btn-sm d-inline">EDIT</a>
+                                        <form action="{% url 'delete' todo.id %}" method="post" class="d-inline">
+                                            {% csrf_token %}
+                                            <input type="submit" class="btn btn-sm btn-danger d-inline" value="DEL">
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <h1 class="display-4 alert alert-danger">No Data Available</h1>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
