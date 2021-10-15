@@ -18,6 +18,6 @@ from django.urls import path
 from ListViewApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.MyListView.as_view(),name="home1"),
+    # path('', views.MyListView.as_view(),name="home1"),
     path('home/', views.MyListView.as_view(),name="home2"),
 ]
